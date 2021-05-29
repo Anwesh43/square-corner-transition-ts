@@ -40,6 +40,10 @@ export const useDimension = () => {
             }
         }
     })
+    return {
+        w, 
+        h
+    }
 }
 
 export const useStyle = (w : number, h : number, scale : number) => {

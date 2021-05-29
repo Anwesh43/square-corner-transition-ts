@@ -70,6 +70,7 @@ export const useStyle = (w : number, h : number, scale : number) => {
             const height = `${size}px`
             const zIndex = 5
             return {
+                position,
                 left, 
                 top, 
                 width, 
@@ -82,8 +83,8 @@ export const useStyle = (w : number, h : number, scale : number) => {
         squareStyle(i : number) : CSSProperties {
             const ix : number = i % 2 
             const iy : number = Math.floor(i / 2)
-            const left : string = `${-size / 2 - size * sf * (1 - 2 * ix)}px`
-            const top : string = `${-size / 2 - size * sf * (1 - 2 * iy)}px`
+            const left : string = `${-size / 2 - size * 0.5 * sf * (1 - 2 * ix)}px`
+            const top : string = `${-size / 2 - size * 0.5 * sf * (1 - 2 * iy)}px`
             const width : string = `${size}px`
             const height : string = `${size}px`
             const opacity = 0.4 
@@ -94,7 +95,7 @@ export const useStyle = (w : number, h : number, scale : number) => {
                 height,
                 position, 
                 background,
-                opacity 
+                opacity
             }
         }
     }

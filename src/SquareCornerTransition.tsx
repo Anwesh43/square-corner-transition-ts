@@ -13,7 +13,7 @@ const SquareCornerTransition : React.FC<SCTProps> = (props : SCTProps) => {
     const {parentStyle, blockStyle, squareStyle} = useStyle(props.w, props.h, props.scale)
     return (
         <div style = {parentStyle()}>
-            <div style = {blockStyle()}></div>
+            <div style = {blockStyle()} onClick = {() => props.onClick()}></div>
             {[0, 1, 2, 3].map(i => (<div key = {`square_${i}`}style = {squareStyle(i)}/>))}
         </div>
     )
